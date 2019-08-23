@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="html5reset-1.6.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <header>
+        <div id="header-logo-wrapper">
+            <a href="#">
+                <img src="./img/logo.png" id="header-logo">
+            </a>
+        </div>
+        <div id="header-menu-wrapper">      
+            <!-- フレキシブルのときに出てくる
+                <form id="article-search">
+                    <input type="text" name="search">
+                </form>
+            -->
+            <ul id="header-menu">
+                <li>WPテーマ作成</li>
+                <li>WPカスタマイズ</li>
+                <li>作業環境・ツール</li>
+                <li>リクエスト</li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="main-container">
+        <nav id="breadcrumbs">
+            <!-- パンくずリスト -->
+            <ol>
+                <li><a href="#">home</a></li>
+                <li><a href="#">first</a></li>
+                <li><a href="#">second</a></li>
+                <li>now</li>
+            </ol>
+        </nav>
+
+        <div id="page-body">
+            <article id="article">
+                <!-- ジャンル -->
+                <div id="genre">
+                    <i class="fas fa-folder icons"></i> <div id="genre-name">作業環境・ツール</div>
+                </div>
+
+                <h1>
+                    ATOMとローカル環境のWordPressを連携してテーマの作成・編集をする
+                </h1>
+
+                <!-- 作成年月日 -->
+                <div id="article-meta">
+                    <div id="article-date">
+                        <ol>
+                            <li>更新日: 2019年8月23日</li>
+                            <li>公開日: 2019年8月23日</li>
+                        </ol>
+                    </div>
+                    <div id="article-author">
+                        <i class="fas fa-user"></i> <div id="author-name">Dozi</div>
+                    </div>
+                </div>
+
+                <!-- ここから本文 -->
+                <div id="article-body">
+                    <p>なんか長い文章</p>
+
+                    <!-- 目次 -->
+                    <div id="lineup">
+                        <p id="lineup-title">CONTENTS</p>
+                        <ol id="lineup-list">
+                            <li><a href="#1">ATOMとは</a></li>
+                            <li><a href="#2">ATOMを導入する<ol>
+                                <li><a href="#2-1">日本語化パッケージを追加する</a></li>
+                            </ol></li>
+                            <li><a href="#3">WordPressのテーマをプロジェクトフォルダに追加する</a></li>
+                            <li>以下省略</li>
+                        </ol>
+                    </div>
+            
+                    <h2 id="1">ATOMとは</h2>
+                    <p>ATOMとは、GitHubが主体となって開発しているオープンソースのコードエディタです。Windows・MAC OS X・Linuxに対応しているため環境を選ばずに使用することができます。</p>
+                    <p>さらに、沢山のプログラム言語も扱うことができるうえに、パッケージを追加することで自分好みに機能を拡張することもできるので、自分にピッタリのエディタに仕上げることができます。</p>
+                    <p>オープンソースのソフトで費用も必要ありませんので、ぜひATOMを導入して自分好みの開発環境を作りましょう。</p>
+
+                    <h2 id="2">ATOMを導入する</h2>
+                    <p>さて、では早速ATOMを公式サイトからインストールしましょう。</p>
+                    <div class="linkbox">
+                        <div class="linkbox-title">
+                            <i class="fas fa-link"></i>link
+                        </div>
+                        <div class="linkbox-body">
+                            公式サイト<br>
+                            <a href="https://atom.io">https://atom.io/</a>
+                        </div>
+                    </div>
+
+                    <p>インストーラーのダウンロート→インストールが完了したらAtomを立ち上げてください。</p>
+
+                    <h3 id="2-1">日本語化パッケージを追加する</h3>
+                    <p>インストールしたばかりのAtomは、英語ですので日本語化しましょう。</p>
+                </div>
+                <!-- ここまで本文 -->
+
+                <!-- タグ -->
+                <div id="tags">
+                    <ul>
+                        <li><a class="round-btn">wordpress</a></li>
+                        <li><a class="round-btn">システム</a></li>
+                        <li><a class="round-btn">ネットビジネス</a></li>
+                        <li><a class="round-btn">パソコン</a></li>
+                    </ul>
+                </div>
+
+                <!-- 前後の記事 -->
+                <div id="prev-next-article">
+                    <div class="pn-articles">
+                        <a href="#">
+                            <div class="pn-article-icons">
+                                ←<br>
+                                prev
+                            </div>
+                            <div class="pn-article-titles">
+                                XAMAPPを使ってWordPressテーマをローカルで作成・編集…
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pn-articles">
+                        <a href="#">
+                            <div class="pn-article-titles">
+                                WordPressのサンプルサイトやテストサイトの記事をCSVで…
+                            </div>
+                            <div class="pn-article-icons">
+                                →<br>
+                                next
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 関連記事 -->
+                <div id="related-articles">
+                    <span class="bar-bottom">RELATED POSTS</span>
+                    なにもなし
+                </div>
+
+
+            </article>
+            <div id="right-side-bar">
+                さいどこんてんつ<br>
+
+                <div class="linkbox">
+                    <div class="linkbox-title">
+                        <i class="fas fa-link"></i>link
+                    </div>
+                    <div class="linkbox-body">
+                        元サイト<br>
+                        <a href="https://plusers.net/wordpress_theme_atom">ここ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-menu-wrapper">      
+            <ul id="footer-menu">
+                <li>サイトマップ</li>
+                <li>リクエスト</li>
+                <li>プライバシーポリシー</li>
+                <li>著作権・免責事項</li>
+                <li>お問い合わせ</li>
+            </ul>
+        </div>
+        <div id="copyright">
+            © 2019 Plusers arranged by Dozi
+        </div>
+    </footer>
+</html>

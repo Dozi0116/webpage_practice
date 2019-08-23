@@ -1,0 +1,282 @@
+/*
+ * リスト要素の箇条書き部分を消去
+*/
+ul {
+    list-style: none;
+}
+
+.icons {
+    display: inline;
+}
+
+html {
+    font-family: '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', 'YuGothic', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'Noto Sans Japanese', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+    background: #F2F2F2;
+    letter-spacing: 0.1em;
+}
+
+
+header, footer {
+    background-color: #222;
+    color: #F2F2F2;
+}
+
+#header-logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#header-logo {
+    margin: 1.5em 0;
+}
+
+#header-menu, #footer-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#header-menu li, #footer-menu li {
+    padding: 1.5em;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#main-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+#breadcrumbs {
+    margin: 1.5em;
+}
+
+#breadcrumbs li {
+    display: inline-block;
+    font-size: 12px;
+    color: #777;
+}
+
+#breadcrumbs li::after {
+    content: " > ";
+}
+
+#breadcrumbs li:last-child::after {
+    display: none;
+}
+
+#page-body {
+    display: flex;
+}
+
+article {
+    background: #FFF;
+    color: #111;
+    margin: 1.5em;
+    padding: 0.5em 1em;
+
+    flex: 0 1 70%;
+}
+
+#genre {
+    padding: 0.5em 0;
+}
+
+#genre-name {
+    display: inline;
+}
+
+article h1 {
+    font-size: 25px;
+}
+
+#article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+#article-date li {
+    display: inline-block;
+    font-size: 12px;
+    color: #777;
+}
+
+#article-date li::after {
+    content: " | ";
+}
+
+#article-date li:last-child::after {
+    display: none;
+}
+
+#author-name {
+    display: inline;
+}
+
+#article-body {
+    margin: 3em 0;
+}
+
+#lineup {
+    border: 4px #000055 solid;
+    margin: 3em 0;
+    padding: 1.5em 0;
+}
+
+#lineup ol {
+    /*
+     * 親が20px,子が更に20px...となり、見た目も入れ子になる。
+    */
+    margin-left: 1.5em;
+}
+
+#lineup li {
+    margin: 1em 0;
+}
+
+#lineup-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#lineup-list {
+    margin: 1em 0;
+    counter-reset: parent;
+    list-style-type: none;
+}
+
+#lineup-list li::before {
+    counter-increment: parent;
+    content: counter(parent) ". ";
+}
+
+#lineup-list li ol {
+    counter-reset: child;
+    list-style-type: none;
+}
+
+#lineup-list li ol li:before {
+    counter-increment: child;
+    content: counter(parent) "-" counter(child) ". ";
+}
+
+article h2 {
+    font-size: 23px;
+    border-bottom: 5px #000055 solid;
+    width: 100%;
+    margin: 2em 0 1.5em 0;
+}
+
+article h3 {
+    font-size: 20px;
+    border-left: 8px #000055 solid;
+    padding: 0.25em 0 0.25em 0.5em;
+    margin: 1.5em 0 1em 0;
+}
+
+article p {
+    margin-bottom: 1.5em;
+    letter-spacing: 0;
+    line-height: 1.5em;
+}
+
+.linkbox {
+    position: relative;
+    margin: 20px 0;
+    padding: 0.5em 1em;
+    border: 2px #222 solid;
+}
+
+.linkbox .linkbox-title {
+    position: absolute;
+    top: -0.6em;
+    left: 1em;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    color: #000;
+    background: #FFF;
+    font-weight: bold;
+}
+
+.linkbox .linkbox-body {
+    /*
+     * 全体にかかってる効果を打ち消す
+    */
+    margin: 0;
+    padding: 0;
+
+    font-weight: bold;
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+}
+
+#tags ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.round-btn {
+    font-size: 14px;
+    border: 1px #222 solid;
+    border-radius: 5px;
+    margin: 3em 0.5em;
+    padding: 0.1em 0.3em;
+}
+
+.bar-bottom {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 3px #000055 solid;
+    margin: 2em 0 1em 0;
+}
+
+#prev-next-article {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pn-articles {
+    flex: 0 1 45%;
+    font-size: 15px;
+    margin: 4em 0;
+}
+
+.pn-articles a {
+    display: flex;
+    text-decoration: none;
+}
+
+.pn-article-icons {
+    flex: 0 1 20%;
+    background: #000055;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 1em;
+}
+
+.pn-article-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em 0.5em;
+    border: 1px #CCC solid;
+}
+
+#right-side-bar {
+    flex: 0 1 30%;
+    margin: 2em 1em 2em 0.5em;
+}
+
+#copyright {
+    width: 100%;
+    text-align: center;
+    padding: 1.5em;
+}
